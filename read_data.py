@@ -10,7 +10,7 @@ read_data_time = 120 #計測時間 (s)
 
 #led.led_start(read_data_time)
 
-def scheduler():
+def scheduler(arg1, arg2):
     ina219_example.main()
 
 #ina = INA219()
@@ -19,7 +19,5 @@ def scheduler():
 signal.signal(signal.SIGALRM, scheduler)
 signal.setitimer(signal.ITIMER_REAL, first_exec_time, interval)
 
-'''
 while True:
     time.sleep(interval)
-'''
