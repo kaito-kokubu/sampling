@@ -19,5 +19,7 @@ def scheduler():
 signal.signal(signal.SIGALRM, scheduler)
 signal.setitimer(signal.ITIMER_REAL, first_exec_time, interval)
 
+'''
 while True:
     time.sleep(interval)
+'''
