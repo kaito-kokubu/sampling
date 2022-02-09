@@ -13,9 +13,10 @@ read_data_time = 120 #計測時間 (s)
 def scheduler(ina):
     ina219_example.main(ina)
 
+ina = INA219()
+
 signal.signal(signal.SIGALRM, scheduler)
 signal.setitimer(signal.ITIMER_REAL, first_exec_time, interval)
 
-ina = INA219()
-
-time.sleep(read_data_time)
+while True:
+    time.sleep(interval)
