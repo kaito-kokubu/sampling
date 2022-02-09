@@ -14,6 +14,7 @@ def scheduler(ina):
     ina219_example.main(ina)
 
 ina = INA219()
+print(ina)
 
 signal.signal(signal.SIGALRM, scheduler)
 signal.setitimer(signal.ITIMER_REAL, first_exec_time, interval)
