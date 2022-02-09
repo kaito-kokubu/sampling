@@ -9,5 +9,5 @@ def main(ina=INA219()):
     print("Bus     : %.3f V" % ina.getBusVoltage_V())
     print("Current : %.3f mA" % ina.getCurrent_mA())
 
-if __name__ == '__main__':#直接yobareru.pyを実行した時だけ、def test()を実行する
+if __name__ == '__main__':
     main()
