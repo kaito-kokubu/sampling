@@ -10,11 +10,11 @@ read_data_time = 120 #計測時間 (s)
 
 #led.led_start(read_data_time)
 
-def scheduler(ina):
-    ina219_example.main(ina)
+def scheduler():
+    ina219_example.main()
 
-ina = INA219()
-print(ina)
+#ina = INA219()
+#print(ina)
 
 signal.signal(signal.SIGALRM, scheduler)
 signal.setitimer(signal.ITIMER_REAL, first_exec_time, interval)
