@@ -9,7 +9,7 @@ import os
 import RPi.GPIO as GPIO
 #import led
 
-first_exec_time = 1 #1回目の実行までの時間 (s)
+first_exec_time = 3 #1回目の実行までの時間 (s)
 interval = 0.1 #2回目以降の実行間隔 (s)
 #read_data_time = 120 #計測時間 (s)
 
@@ -31,6 +31,7 @@ def scheduler(arg1, arg2):
     else:
         result.append('off')
     result_data.append(result)
+    i += 1
 
 #ina = INA219()
 #print(ina)
