@@ -7,9 +7,12 @@ import csv
 import datetime
 import os
 import RPi.GPIO as GPIO
-#import led
 
-first_exec_time = 3 #1回目の実行までの時間 (s)
+result_data = []
+i = 0
+led_on = False
+
+first_exec_time = 1 #1回目の実行までの時間 (s)
 interval = 0.1 #2回目以降の実行間隔 (s)
 #read_data_time = 120 #計測時間 (s)
 
@@ -17,9 +20,6 @@ interval = 0.1 #2回目以降の実行間隔 (s)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(25, GPIO.OUT)
 
-result_data = []
-i = 0
-led_on = False
 
 def scheduler(arg1, arg2):
     if i == 50:
