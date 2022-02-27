@@ -5,6 +5,7 @@ from Subfact_ina219 import INA219
 import ina219_example
 import csv
 import datetime
+import os
 #import led
 
 first_exec_time = 1 #1回目の実行までの時間 (s)
@@ -30,6 +31,7 @@ try:
         time.sleep(interval)
 except KeyboardInterrupt:
     print("Keyboard Interrupted!")
+    print(os.getcwd())
     now = datetime.datetime.now()
     filename = "~/Desktop/sampling/output/log_" + now.strftime("%Y%m%d_%H%M%S") + ".csv"
     with open(filename, 'w') as f:
