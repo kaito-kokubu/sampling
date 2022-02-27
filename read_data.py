@@ -32,7 +32,7 @@ except KeyboardInterrupt:
     print("Keyboard Interrupted!")
     now = datetime.datetime.now()
     filename = "~/Desktop/sampling/output/log_" + now.strftime("%Y%m%d_%H%M%S") + ".csv"
-    with open(filename) as f:
+    with open(filename, 'w') as f:
         writer = csv.writer(f)
         writer.writerows(result_data)
     print("Data saved!")
