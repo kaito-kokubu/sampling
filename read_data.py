@@ -33,7 +33,7 @@ except KeyboardInterrupt:
     print("Keyboard Interrupted!")
     print(os.getcwd())
     now = datetime.datetime.now()
-    filename = "~/Desktop/sampling/output/log_" + now.strftime("%Y%m%d_%H%M%S") + ".csv"
+    filename = "/home/pi/Desktop/sampling/output/log_" + now.strftime("%Y%m%d_%H%M%S") + ".csv"
     with open(filename, 'w') as f:
         writer = csv.writer(f)
         writer.writerows(result_data)
