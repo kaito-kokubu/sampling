@@ -12,7 +12,7 @@ result_data = []
 i = 0
 led_on = False
 
-first_exec_time = 1 #1回目の実行までの時間 (s)
+first_exec_time = 5 #1回目の実行までの時間 (s)
 interval = 0.1 #2回目以降の実行間隔 (s)
 #read_data_time = 120 #計測時間 (s)
 
