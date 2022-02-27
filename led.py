@@ -15,3 +15,6 @@ def led_start(how_long_LED):
         if i >= how_long_LED:
             break
     GPIO.output(25, GPIO.LOW)
+
+if __name__ == "__main__":
+    led_start(10)
