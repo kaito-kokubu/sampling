@@ -1,7 +1,9 @@
 import RPi.GPIO as GPIO
 from time import sleep
+import datetime
 
 def led_start(how_long_LED):
+    print(f"exec time: {datetime.datetime.now()}")
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(25, GPIO.OUT)
 
