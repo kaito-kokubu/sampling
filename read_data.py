@@ -9,8 +9,8 @@ import os
 #import led
 
 first_exec_time = 1 #1回目の実行までの時間 (s)
-interval = 1 #2回目以降の実行間隔 (s)
-read_data_time = 120 #計測時間 (s)
+interval = 0.1 #2回目以降の実行間隔 (s)
+#read_data_time = 120 #計測時間 (s)
 
 #led.led_start(read_data_time)
 
@@ -28,7 +28,7 @@ signal.setitimer(signal.ITIMER_REAL, first_exec_time, interval)
 
 try:
     while True:
-        time.sleep(interval)
+        time.sleep(1)
 except KeyboardInterrupt:
     print("Keyboard Interrupted!")
     print(os.getcwd())
