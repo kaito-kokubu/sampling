@@ -10,6 +10,7 @@ import RPi.GPIO as GPIO
 
 
 def scheduler(arg1, arg2):
+    '''
     if i == 50:
         GPIO.output(25, GPIO.HIGH)
         led_on = True
@@ -20,6 +21,9 @@ def scheduler(arg1, arg2):
         result.append('off')
     result_data.append(result)
     i += 1
+    '''
+    result = ina219_example.main()
+    result_data.append(result)
 
 
 result_data = []
