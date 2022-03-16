@@ -33,8 +33,8 @@ led_on = False
 '''
 
 first_exec_time = 5 #1回目の実行までの時間 (s)
-#interval = 0.0714 #2回目以降の実行間隔 (s)
-interval = 0.1
+interval = 0.0714 #2回目以降の実行間隔 (s)
+#interval = 0.1
 #read_data_time = 120 #計測時間 (s)
 
 #led.led_start(read_data_time)
