@@ -1,10 +1,7 @@
 #!/bin/bash
 
-start_time=`date "+%Y-%m-%d %H:%M:%S"`
+date_today=`date +%Y%m%d%H%M"`
 
-./build/profiler -p >> ./result/ina219_$(date +%Y%m%d%H%M).csv
+echo `date "+%Y-%m-%d %H:%M:%S"` >> ./result/ina219_$date_today.csv
 
-end_time=`date "+%Y-%m-%d %H:%M:%S"`
-
-echo $start_time
-echo $end_time
+./build/profiler -p >> ./result/ina219_$date_today.csv
